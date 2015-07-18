@@ -1,0 +1,446 @@
+@CHARSET "UTF-8";
+
+* {
+    text-decoration: none;
+    font-family: "Malgun Gothic";
+     text-align: center;
+     font-weight: bold;
+}
+
+.myHeader {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #eeeeee;
+    padding-top: 12px;
+    font-size: 20px;
+
+}
+
+
+
+
+.style1 {
+    font-size: 20px;
+    text-align: center;
+    color: #363636;
+    font: bold 25px Georgia;
+}
+
+.wholePage input {
+    opacity: 0.7;
+}
+
+.wholePage input:focus {
+    background-color: #eeeeee;
+    opacity: 1;
+}
+
+.wholePage .buttons {
+    background-color: #FAF4C0;
+    opacity: 0.9;    
+	height: 60px;
+	margin-top:5px;
+	margin-bottom:35px;
+	font-size:20px;
+}
+
+.wholePage .buttons:active {
+    background-color: #E8E2AE;
+    opacity: 1;
+}
+
+.wholePage .buttons:hover {
+    background-color: #E8E2AE;
+    opacity: 1;
+}
+
+.wholePage {
+    background: url('../img/test2.png');
+    background-size: 100% 300px;
+    background-repeat: no-repeat;
+    background-position: 50% 90%;    
+    background-attachment: fixed;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    background-color: #dddddd;
+    width: 100%;
+    height: 8%;
+    display: none;
+}
+
+.scroll {
+    overflow: auto;
+}
+
+/* page7에서 쓰임 */
+.page7_1 .ui-block-a label {
+    border: 1px gray solid;
+    box-shadow: 3px 3px 3px #888888;
+	
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f8ffe8), color-stop(33%,#e3f5ab), color-stop(100%,#b7df2d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #f8ffe8 0%,#e3f5ab 33%,#b7df2d 100%); /* Chrome10+,Safari5.1+ */
+	
+}
+
+.page7_1 .ui-block-a {
+    width: 20%;
+}
+
+.page7_1 .ui-block-b {
+    width: 63%;
+}
+.page7_1 .ui-block-c {
+    width: 16%;
+}
+
+.page7_1 .ui-block-b label {
+    box-shadow: 3px 3px 3px #888888;
+    background-color: white;
+}
+.page7_1 .ui-block-c label {
+  	 background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f8ffe8), color-stop(33%,#e3f5ab), color-stop(100%,#b7df2d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #f8ffe8 0%,#e3f5ab 33%,#b7df2d 100%); /* Chrome10+,Safari5.1+ */
+	
+    border: 1px gray solid;
+    box-shadow: 3px 3px 3px #888888;
+}
+
+/* page7에서 쓰임 */
+.page7_2 .ui-block-a label {
+  	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#d6f9ff), color-stop(100%,#9ee8fa)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #d6f9ff 0%,#9ee8fa 100%); /* Chrome10+,Safari5.1+ */
+	
+    border: 1px gray solid;
+    box-shadow: 3px 3px 3px #888888;
+}
+
+.page7_2 .ui-block-a {
+    width: 20%;
+}
+
+.page7_2 .ui-block-b {
+    width: 63%;
+}
+
+.page7_2 .ui-block-b label {
+    box-shadow: 3px 3px 3px #888888;
+    background-color: white;
+}
+
+.page7_2 .ui-block-c {
+    width: 16%;
+}
+
+.page7_2 .ui-block-c label {
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#d6f9ff), color-stop(100%,#9ee8fa)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #d6f9ff 0%,#9ee8fa 100%); /* Chrome10+,Safari5.1+ */
+	border: 1px gray solid;
+    box-shadow: 3px 3px 3px #888888;
+}
+
+/* page7에서 쓰임 */
+.page7_3 .ui-block-a label {
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fcfff4), color-stop(40%,#dfe5d7), color-stop(100%,#b3bead)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Chrome10+,Safari5.1+ */
+
+    border: 1px gray solid;
+    box-shadow: 3px 3px 3px #888888;
+}
+
+.page7_3 .ui-block-a {
+    width: 20%;
+}
+
+.page7_3 .ui-block-b {
+    width: 63%;
+}
+
+.page7_3 .ui-block-b label {
+    box-shadow: 3px 3px 3px #888888;
+    background-color: white;
+}
+
+.page7_3 .ui-block-c {
+    width: 16%;
+}
+
+.page7_3 .ui-block-c label {
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fcfff4), color-stop(40%,#dfe5d7), color-stop(100%,#b3bead)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Chrome10+,Safari5.1+ */
+	border: 1px gray solid;
+    box-shadow: 3px 3px 3px #888888;
+}
+
+
+#show{
+	width: 100%; 
+	height:30px; 
+	position: relative; 
+	box-shadow: 3px 3px 3px #888888; 
+	border-radius:10px; 
+	background-color: background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+	border:1px gray solid; 
+	padding-top: 8px;
+	margin-bottom: 20px;	
+}
+
+#show span:nth-child(3){
+	 width: 20px; 
+	 height: 20px; 
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#b6e026), color-stop(100%,#abdc28)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #b6e026 0%,#abdc28 100%); /* Chrome10+,Safari5.1+ */
+	border-radius: 5px;
+	
+	box-shadow: 2px 2px 2px #888888;
+}
+#show span:nth-child(1){
+	 width: 20px; 
+	 height: 20px; 
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#febbbb), color-stop(45%,#fe9090), color-stop(100%,#ff5c5c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #febbbb 0%,#fe9090 45%,#ff5c5c 100%); /* Chrome10+,Safari5.1+ */
+	border-radius: 5px;
+	
+	box-shadow: 2px 2px 2px #888888;
+}
+#show span:nth-child(2){
+	 width: 20px; 
+	 height: 20px; 
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#b0d4e3), color-stop(100%,#88bacf)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #b0d4e3 0%,#88bacf 100%); /* Chrome10+,Safari5.1+ */
+		border-radius: 5px;
+		
+	box-shadow: 2px 2px 2px #888888;
+}
+#pageseven{
+	background-color:#E3DDD7;
+	
+}
+	
+#pageseven .ui-grid-b .ui-block-a .texts{
+	
+	font-weight: bold;
+	
+}					
+					
+.bar_{	
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+
+	box-shadow: 3px 3px 3px #888888;
+	border-radius: 10px; 
+	border: 1px solid gray; 
+	width: 99%; 
+	height: 40px; 
+	overflow: hidden;
+	
+							
+}
+
+.bar_min {
+    left: 0%;
+    width: 2px;
+    height: 41px;
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f3c5bd), color-stop(50%,#e86c57), color-stop(51%,#ea2803), color-stop(75%,#ff6600), color-stop(100%,#c72200)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #f3c5bd 0%,#e86c57 50%,#ea2803 51%,#ff6600 75%,#c72200 100%); /* Chrome10+,Safari5.1+ */
+
+    position: relative; 
+    float: left;
+    height: 100%;
+}
+.bar_you{
+	height: 100%;
+    left: 50%;
+    width: 2px;
+    height: 41px;
+    
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#cedbe9), color-stop(17%,#aac5de), color-stop(50%,#6199c7), color-stop(51%,#3a84c3), color-stop(59%,#419ad6), color-stop(71%,#4bb8f0), color-stop(84%,#3a8bc2), color-stop(100%,#26558b)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%); /* Chrome10+,Safari5.1+ */
+    
+
+    position: relative; 
+    float: left;
+       /*transition-duration: 0.2s;*/
+}
+.bar_max {
+	height: 100%;
+	position: relative; 
+    left: 100%;
+    width: 2px;
+    height: 41px;
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#bfd255), color-stop(50%,#8eb92a), color-stop(51%,#72aa00), color-stop(100%,#9ecb2d)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Chrome10+,Safari5.1+ */
+
+     /*transition-duration: 0.2s;*/
+}
+
+/* page4에서 쓰임 */
+.grid4 .ui-block-a {
+    padding-top: 10px;
+    width: 30%;
+}
+
+.grid4 .ui-block-b {
+    width: 42%;
+}
+
+.grid4 .ui-block-d {
+    padding-top: 2px;
+}
+
+fieldset {
+    margin-top: 10px;
+}
+
+label.texts {
+    border-radius: 10px;
+    height: 30px;
+    padding-top: 10px;
+
+    border: 1px green solid;
+}
+
+#backHome {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top : 7px;
+    right: 7px;
+    transition-duration: 0.05s;
+}
+
+#backHome:active {
+    width: 50px;
+    height: 50px;
+    top : 2px;
+    right: 2px;
+     /*transition-duration: 0.2s;*/
+}
+#backButton {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top : 7px;
+    left: 7px;
+       /*transition-duration: 0.2s;*/
+}
+
+#backButton:active {
+    left: 0px;
+}
+
+#result {
+    width: 50%;
+    position: fixed;
+}
+
+#logo_1 {
+    width: 90%;
+    left: 5%;
+    position: absolute;
+	bottom:10%;
+}
+#logo_2 {
+    width: 90%;
+    left: 5%;
+    top: 30%;
+    position: absolute;
+}
+
+#res_score_register {
+	margin-top:20px;
+	position: absolute;
+	top:18%;
+    width: 100%;
+    text-align: center;
+    border-collapse:collapse;  
+    box-shadow: 3px 3px 3px #888888; 
+    
+}
+#res_score_register td{
+	border: 1px solid black;
+	margin-top:10px;
+}
+
+#pageeight table thead {
+    background-color: #FAF4C0;
+}
+
+#pageeight table tbody {
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+
+}
+#trash{
+	position: absolute; 
+	width: 10.5%; 
+	right: 16%;
+	top: 8.9%;
+	float:right; 
+	margin-top: 10px;
+	margin-right: 5px;
+}
+#trash:active{
+	width: 12.5%;
+	right: 15%;
+	top:7.9%;
+}
+#save{
+	position: absolute; 
+	width: 10%; 
+	right: 2%;
+	top: 9%;
+	float:right; 
+	margin-top: 10px;
+	margin-right: 5px;
+}
+#save:active{
+	width: 12%;
+	right: 1%;
+	top:8.5%;
+}
+#showList{
+	position: absolute; 
+	top: 9%;
+	left: 3%;
+	width: 65%;	
+}
+
+.scale{	
+	height: 10%; 
+	width:100%;
+	position: relative;	
+	margin-top:-5px;	
+}
+.scale div{
+	position: relative;
+	background-color: black;
+	width: 1px;
+	height:30px;
+	left: 0%;
+	float:left;
+}
+
+.myScore{
+	height: 10px;
+	font-size: 10px;
+	margin-bottom: 4px;
+	margin-top:-3px;
+	
+}
+
+
+#showMeList{
+	right: 2%;
+	bottom: 2%;
+	position: fixed; 
+	opacity: 0.7;
+	width: 9%;	
+}
+#showMeList:active{
+	opacity: 1;
+}
