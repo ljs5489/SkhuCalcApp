@@ -128,10 +128,12 @@ function submitData(curPage) {
 }
 
 function calcResult() {//수능 성적계산
+	//(국어 백분위 * 0.4 + 영어 백분위 * 0.4 + 탐구/제2외국어/한문백문위 * 0.2) * 3
 	var temp;
 	var total = 0
 
-	if (isNaN(Number(datas.kor)) == false)temp = datas.kor * 0.4;	
+	if (isNaN(Number(datas.kor)) == false)
+		temp = datas.kor * 0.4;	//
 	if ('b'==datas.kor_type){
 		temp *= 1.1;
 	}
@@ -166,6 +168,48 @@ function calcResult() {//수능 성적계산
 }
 
 
+function subCal(val){ //등급별 가산
+	switch(val){
+		case 1: return val*12;
+		case 2: return val*10;
+		case 3: return val*9;
+		case 4: return val*8;
+		case 5: return val*7;
+		case 6: return val*6;
+		case 7: return val*4;
+		case 8: return val*2;
+		case 9: return val*0;	
+	}
+	
+}
+function calcResult2() {//학생부 성적계산
+	var total = 0
+	var curPage="pagesix";
+	var error=false;
+	//datas.scores = "";
+	
+	$("#" + curPage + " input[name=scores]").each(function() {
+		var temp = parseInt($(this).val());			
+		if (isNaN(temp) == false && temp >= 1 && temp <= 9) {
+			total += subCal(parseInt($(this).val()));// 정상적인 숫자라면 더해준다.
+		}
+		else{				
+			error=true;
+		}
+	});
+	
+	if(error){
+		//showAlert("학생부 등급값이 올바르지 않습니다.");
+		return false;
+	}
+	else{
+		//datas.scores = Math.round(yourAverage / count * 100) / 100;
+		//return yourAverage=datas.scores;	
+		return (total+50+42); //50 : 교과 기본 점수, 42 : 비교과 만점
+	}	
+}
+
+
 function trimNum(num){	
 	if(num==0){
 		return "000.00";
@@ -184,7 +228,11 @@ function moveBars() {
 		
 		yourPoint=Math.round(yourPoint*100)/100;	
 		//showAlert('수능성적환산'+yourPoint);
-		$('#point').html(yourPoint+"점");
+		$('#point').html(yourPoint+"점"); //here
+		$('#point2').html(calcResult2()+"점!"); //here
+		
+		
+		
 		if(datas.apply_type==1)//수능이면
 			tempTable=allData2;
 		else
@@ -227,6 +275,7 @@ function resetAll(page) {
 	case 0://모든 페이지 리셋
 		$("input[type=text]").val("");
 		$('#point').html("수능성적환산");
+		$('#point2').html("학생부성적환산");
 		for (var i = 0; i < 13; i++) {//바도 리셋
 			$(".bar_min:nth(" + i + ")").css('left', '0%');
 			$(".bar_max:nth(" + i + ")").css('left', '100%');

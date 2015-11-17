@@ -5,6 +5,9 @@
 <meta http-equiv="Content-Type" content="tzext/html; charset=UTF-8">
 <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
 <script src="js/jquery.min.js"></script>
+<script>
+$(document).bind('mobileinit',function(){$.mobile.pushStateEnabled = false;}); //이거 없으면 그냥 실행이 안됨.
+</script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 
 <link rel="stylesheet" href="css/tools.css">
@@ -28,7 +31,7 @@
 		</div>
 
 		<div data-role="main" class="ui-content">
-			<a href="#pagetwo" data-transition="slide"> 			
+			<a href="#pagetwo" ><!--data-transition="slide"--> 			
 				<img src="img/2.png" id="logo_2" />				
 				<img src="img/100.png" id="logo_1" />
 			</a>
@@ -46,12 +49,12 @@
 		</div>
 		<div style="height: 30px"></div>
 		<div data-role="main" class="ui-content">
-			<a href="#pagethree" data-transition="slide">
+			<a href="#pagethree" ><!--data-transition="slide"-->
 				<button class="buttons"
 					onclick="
     					putCategory(category.usrType, 'society');">인문
 					사회계</button>
-			</a> <a href="#pagethree" data-transition="slide">
+			</a> <a href="#pagethree" ><!--data-transition="slide"-->
 				<button class="buttons"
 					onclick="
    						putCategory(category.usrType, 'engineering');">공학계
@@ -71,7 +74,7 @@
 		<div style="height: 30px"></div>
 		<div data-role="main" class="ui-content">
 			<button class="buttons" onclick="nextPage(); putCategory(category.applyType, 1)">수능 중심</button>
-			<a href="#pagesix" data-transition="slide">
+			<a href="#pagesix" ><!--data-transition="slide"-->
 				<button class="buttons" onclick="putCategory(category.applyType, 2)">일반학생</button>
 			</a>
 		</div>
@@ -90,12 +93,13 @@
 				<div class="ui-block-a" style="width: 70%; font-size: 20px;">
 					<p>수능 점수를 입력해 주세요</p>
 				</div>
+
 				<div class="ui-block-b" style="width: 28%;">
 					<button onclick="resetAll(4);">Reset</button>
 				</div>
 				<br />
 			</div>
-
+				<div style="text-align: right;"><B>국어 B형 선택시 10% 가산</B></div>
 			<div class="ui-grid-c grid4">
 				<div class="ui-block-a style1">국어</div>
 				<div class="ui-block-b">
@@ -123,7 +127,7 @@
 				</div>
 			</div>
 
-			<a href="#pageseven" data-transition="slide">
+			<a href="#pageseven" ><!--data-transition="slide"-->
 				<button class="buttons" onclick="submitData('pagefour')">결 과</button>
 			</a>
 		</div>
@@ -156,7 +160,7 @@
 					<input type="text" name="eng">
 				</div>
 			</div>
-
+				<div style="text-align: right;"><B>수학 B형 선택시 10% 가산</B></div>
 			<div class="ui-grid-c grid4">
 				<div class="ui-block-a style1" style="width: 30%;">수학</div>
 				<div class="ui-block-b" style="width: 42%">
@@ -169,6 +173,7 @@
 					</select>
 				</fieldset>
 			</div>
+							<div style="text-align: right;"><B>과탐 선택시 5% 가산</B></div>
 			<div class="ui-grid-c grid4">
 				<div class="ui-block-a style1" style="width: 30%;">탐구</div>
 				<div class="ui-block-b" style="width: 42%">
@@ -183,7 +188,7 @@
 				</fieldset>
 			</div>
 
-			<a href="#pageseven" data-transition="slide">
+			<a href="#pageseven" ><!--data-transition="slide"-->
 				<button class="buttons" onclick="submitData('pagefive')">결 과</button>
 			</a>
 		</div>
@@ -281,7 +286,9 @@
 		<div data-role="main" class="ui-content">
 
 			<div class="ui-grid-a">
+				
 				<div class="ui-block-a">
+				<div>수능점수</div>
 					<p id=point style="
 					font-size:20px; 
 					margin-top:3px; 
@@ -292,8 +299,21 @@
 					padding:6px;">수능성적환산</p>
 				</div>
 				<div class="ui-block-b">
+				<div>학생부</div>
+					<p id=point2 style="
+					font-size:20px; 
+					margin-top:3px; 
+					border: 2px solid gray; 
+					background-color:#eeeeee; 
+					border-radius:5px; 					
+    				box-shadow: 3px 3px 3px #888888; 
+					padding:6px;">학생부성적환산</p>
+				</div>
+				<!-- 
+				<div class="ui-block-b">
 					<p  style="font-size:15px; text-align: right; margin-bottom:0px; padding:3px;">*2014년 입시 기준</p>
 				</div>
+				 -->
 			</div>
 			
 			
@@ -565,7 +585,7 @@
 			<div class="myScore"></div>
 		</div>
 	</div>
-		<a href="#pageeight" data-transition="slide">	
+		<a href="#pageeight" ><!--data-transition="slide"-->	
 			<img src="img/showMeList.png" id="showMeList"/>
 		</a>	
 	</div>
