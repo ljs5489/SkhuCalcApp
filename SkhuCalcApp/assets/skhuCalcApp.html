@@ -173,7 +173,7 @@ $(document).bind('mobileinit',function(){$.mobile.pushStateEnabled = false;}); /
 					</select>
 				</fieldset>
 			</div>
-							<div style="text-align: right;"><B>과탐 선택시 5% 가산</B></div>
+			<div style="text-align: right;"><B>과탐 선택시 5% 가산</B></div>
 			<div class="ui-grid-c grid4">
 				<div class="ui-block-a style1" style="width: 30%;">탐구</div>
 				<div class="ui-block-b" style="width: 42%">
@@ -298,7 +298,8 @@ $(document).bind('mobileinit',function(){$.mobile.pushStateEnabled = false;}); /
     				box-shadow: 3px 3px 3px #888888; 
 					padding:6px;">수능성적환산</p>
 				</div>
-				<div class="ui-block-b">
+				
+				<div class="ui-block-b" id="schoolscore">
 				<div>학생부</div>
 					<p id=point2 style="
 					font-size:20px; 
@@ -309,6 +310,8 @@ $(document).bind('mobileinit',function(){$.mobile.pushStateEnabled = false;}); /
     				box-shadow: 3px 3px 3px #888888; 
 					padding:6px;">학생부성적환산</p>
 				</div>
+				
+				
 				<!-- 
 				<div class="ui-block-b">
 					<p  style="font-size:15px; text-align: right; margin-bottom:0px; padding:3px;">*2014년 입시 기준</p>

@@ -170,15 +170,15 @@ function calcResult() {//수능 성적계산
 
 function subCal(val){ //등급별 가산
 	switch(val){
-		case 1: return val*12;
-		case 2: return val*10;
-		case 3: return val*9;
-		case 4: return val*8;
-		case 5: return val*7;
-		case 6: return val*6;
-		case 7: return val*4;
-		case 8: return val*2;
-		case 9: return val*0;	
+		case 1: return 12;
+		case 2: return 10;
+		case 3: return 9;
+		case 4: return 8;
+		case 5: return 7;
+		case 6: return 6;
+		case 7: return 4;
+		case 8: return 2;
+		default: return 0;	
 	}
 	
 }
@@ -218,57 +218,90 @@ function trimNum(num){
 		return num.toFixed(2);//소수점 고정
 	}
 }
+
+//===================================결과===========================================
 function moveBars() {
 	function cal(temp) {
-		if(temp<100) temp=100;
-		return (temp-100) /2 ;// 수능		
+		if(temp<100) temp=100;			
+		
+		if(datas.apply_type==1){ //수능이면
+			return (temp-100)/2;//수능은 만점이 300점이므로.	
+		}
+		else if(datas.apply_type==2){ //학생부이면
+			return (temp-100)/4;//학생부는 만점이 500점이므로.	
+		}	
 	}	
-		var yourPoint = calcResult();
-		var tempTable;
+
+	var yourPoint;
+	var tempTable;
+	
 		
-		yourPoint=Math.round(yourPoint*100)/100;	
-		//showAlert('수능성적환산'+yourPoint);
-		$('#point').html(yourPoint+"점"); //here
-		$('#point2').html(calcResult2()+"점!"); //here
+	
+	if(datas.apply_type==1){ //수능이면
+		yourPoint=Math.round(calcResult()*100)/100;//수능은 만점이 300점이므로.
+	}
+	
+	else if(datas.apply_type==2){ //학생부이면
+		yourPoint=Math.round((calcResult()+calcResult2())*100)/100;
+		//수능은 만점이 300, 학생부는 만점이 200이므로...
+	}	
+	
+	//showAlert('수능성적환산'+yourPoint);
+	$('#point').html(Math.round(calcResult()*100)/100+"점"); //수능 점수 놓는곳
+	$('#point2').html(Math.round(calcResult2()*100)/100+"점"); //학생부 점수 놓는곳
+	
+	
+	
+	if(datas.apply_type==1){//수능이면		
+		tempTable=allData2;
+		$("#pageseven #schoolscore").hide();//정시일 경우, 학생부 점수는 필요 없다.
+	}
+	else{
+		tempTable=allData;
+		$("#pageseven #schoolscore").show();
+	}
+	
+	for (var i = 0; i < 13; i++) {		
+		$(".bar_max:nth(" + i + ")").css('left',cal(tempTable[i][0][5]) + '%');
+		$(".bar_min:nth(" + i + ")").css('left',cal(tempTable[i][1][5]) + '%');
 		
 		
+		$(".bar_you:nth(" + i + ")").css('left', cal(yourPoint) + '%');
 		
-		if(datas.apply_type==1)//수능이면
-			tempTable=allData2;
-		else
-			tempTable=allData;
 		
-		for (var i = 0; i < 13; i++) {
-			$(".bar_you:nth(" + i + ")").css('left', cal(yourPoint) + '%');
-			$(".myScore:nth(" + i + ")").html(
-					"<div style='color: red; position:absolute; left:30%; '>"+trimNum(tempTable[i][1][5])+"</div>"
-					+"<div style='color: green; position:absolute; left:65%;'>"+trimNum(tempTable[i][0][5])+"</div>"
-					);			
-			$(".bar_max:nth(" + i + ")").css('left',cal(tempTable[i][0][5]) + '%');
-			$(".bar_min:nth(" + i + ")").css('left',cal(tempTable[i][1][5]) + '%');
-		}
-		if(datas.usr_type=="society"){
-			$("#nav1").show();
-			$("#nav2").hide();
-			showMe(1);
-			$("#pageseven .myHeader").html("결과(인문계)");
-		}
-		else{
-			$("#nav2").show();
-			$("#nav1").hide();
-			showMe(3);
-			$("#pageseven .myHeader").html("결과 (공학계)");
-		}
-		//alert();
-		//if()
-		/*<div class="scale2">
-		<span>100</span>
-		<div class="bar_scale">min</div>
-		<div class="bar_scale">you</div>
-		<div class="bar_scale">max</div>
-		<span>300</span>
-		</div>*/
+		$(".myScore:nth(" + i + ")").html(
+				"<div style='color: red; position:absolute; left:30%; '>"+trimNum(tempTable[i][1][5])+"</div>"
+				+"<div style='color: green; position:absolute; left:65%;'>"+trimNum(tempTable[i][0][5])+"</div>"
+		);	
+	}
+	if(datas.usr_type=="society"){
+		$("#nav1").show();
+		$("#nav2").hide();
+		showMe(1);
+		$("#pageseven .myHeader").html("결과(인문계)");
+	}
+	else{
+		$("#nav2").show();
+		$("#nav1").hide();
+		showMe(3);
+		$("#pageseven .myHeader").html("결과 (공학계)");
+	}
+	//alert();
+	//if()
+	/*<div class="scale2">
+	<span>100</span>
+	<div class="bar_scale">min</div>
+	<div class="bar_scale">you</div>
+	<div class="bar_scale">max</div>
+	<span>300</span>
+	</div>*/
 }
+//===================================/결과===========================================
+
+
+
+
+
 
 function resetAll(page) {	
 	switch(page){
