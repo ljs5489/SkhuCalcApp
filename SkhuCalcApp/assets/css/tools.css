@@ -186,7 +186,7 @@
 	background: -webkit-linear-gradient(-45deg,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
 	border:1px gray solid; 
 	padding-top: 8px;
-	margin-bottom: 20px;	
+	margin-bottom: 10px;	
 }
 
 #show span:nth-child(3){

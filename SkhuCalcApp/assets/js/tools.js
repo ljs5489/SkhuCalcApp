@@ -246,6 +246,8 @@ function moveBars() {
 		//수능은 만점이 300, 학생부는 만점이 200이므로...
 	}	
 	
+	$("#showVal span").html(yourPoint); //점수를 지원자 합산 성적에 넣어줌
+	
 	//showAlert('수능성적환산'+yourPoint);
 	$('#point').html(Math.round(calcResult()*100)/100+"점"); //수능 점수 놓는곳
 	$('#point2').html(Math.round(calcResult2()*100)/100+"점"); //학생부 점수 놓는곳
@@ -279,6 +281,11 @@ function moveBars() {
 		$("#nav2").hide();
 		showMe(1);
 		$("#pageseven .myHeader").html("결과(인문계)");
+		//$(function(){
+		//	$("#nav1 ul li:first-child a").click();			
+		//});
+		//인문계는 인문/사회로 나뉘므로 맨처음 클릭 이벤트를 준다.
+		
 	}
 	else{
 		$("#nav2").show();

@@ -73,9 +73,9 @@ $(document).bind('mobileinit',function(){$.mobile.pushStateEnabled = false;}); /
 		</div>
 		<div style="height: 30px"></div>
 		<div data-role="main" class="ui-content">
-			<button class="buttons" onclick="nextPage(); putCategory(category.applyType, 1)">수능 중심</button>
+			<button class="buttons" onclick="nextPage(); putCategory(category.applyType, 1)">수능중심(수능100)</button>
 			<a href="#pagesix" ><!--data-transition="slide"-->
-				<button class="buttons" onclick="putCategory(category.applyType, 2)">일반학생</button>
+				<button class="buttons" onclick="putCategory(category.applyType, 2)">일반학생(수능60+학생부40)</button>
 			</a>
 		</div>
 	</div>
@@ -325,7 +325,7 @@ $(document).bind('mobileinit',function(){$.mobile.pushStateEnabled = false;}); /
 	    <div id="nav1" data-role="navbar" 
 	    style="border: 2px gray solid; border-radius:4px; display:none;">
 	      <ul>
-	        <li><a onclick="showMe(1)" style="font-size: 15px;">인 문</a></li>
+	        <li><a onclick="showMe(1)" style="font-size: 15px;" class="ui-link ui-btn ui-btn-active">인 문</a></li>
 	        <li><a onclick="showMe(2)" style="font-size: 15px;">사 회</a></li>
 	      </ul>
 	    </div>
@@ -342,6 +342,9 @@ $(document).bind('mobileinit',function(){$.mobile.pushStateEnabled = false;}); /
 				<span>　</span> 최종합격자				 
 				<span>　</span> 지원자성적
 				<span>　</span> 최초합격자 
+			</div>
+			<div id="showVal" style="text-align: left;">
+				지원자 성적 : <b><span></span></b>점
 			</div>
 			<div id="page7_s1" style="display:none;">
 			<br/>
